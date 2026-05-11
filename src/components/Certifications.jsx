@@ -1,32 +1,22 @@
-import { motion } from 'framer-motion'
+import BlurFade from './BlurFade'
 import { certifications } from '../data/resumeData'
 
 export default function Certifications() {
   return (
     <section id="certifications" className="py-24 px-4 relative">
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-        >
+        <BlurFade>
           <div className="flex items-center gap-3 mb-2">
             <span className="font-mono text-cyber-pink text-sm">05.</span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white">Certifications</h2>
             <span className="flex-1 h-px bg-gradient-to-r from-cyber-purple to-transparent" />
           </div>
+        </BlurFade>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
-            {certifications.map((cert, idx) => (
-              <motion.div
-                key={cert.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05, duration: 0.3 }}
-                className="group relative p-4 rounded-lg border border-cyber-purple/20 bg-cyber-dark/30 hover:border-cyber-magenta/50 transition-all duration-300"
-              >
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+          {certifications.map((cert, idx) => (
+            <BlurFade key={cert.name} delay={idx * 0.04}>
+              <div className="group relative p-4 rounded-lg border border-cyber-purple/20 bg-cyber-dark/30 hover:border-cyber-magenta/50 transition-all duration-300 h-full">
                 <div className="mb-3">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyber-purple to-cyber-magenta flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -43,10 +33,10 @@ export default function Certifications() {
                     {cert.status}
                   </span>
                 )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              </div>
+            </BlurFade>
+          ))}
+        </div>
       </div>
     </section>
   )

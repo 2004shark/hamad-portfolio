@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="max-w-3xl mx-auto relative z-10 text-center">
         <BlurFade>
           <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="font-mono text-cyber-pink text-sm">05.</span>
+            <span className="font-mono text-cyber-pink text-sm">06.</span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white">Get In Touch</h2>
             <span className="h-px w-12 bg-gradient-to-l from-cyber-purple to-transparent" />
           </div>

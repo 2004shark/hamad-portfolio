@@ -34,7 +34,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="hero" className="relative min-h-dvh flex items-center justify-center overflow-hidden bg-cyber-darkest">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cyber-darkest">
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255, 123, 191, 0.4) 1px, transparent 0)`,
         backgroundSize: '40px 40px',
