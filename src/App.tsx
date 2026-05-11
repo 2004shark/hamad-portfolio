@@ -9,10 +9,14 @@ import Research from './components/Research'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ThreatParticles from './components/ThreatParticles'
+import CyberWeb from './components/CyberWeb'
 
 export default function App() {
   return (
     <main className="min-h-screen bg-bg-primary">
+      <CyberWeb />
+      <ThreatParticles />
       <Navbar />
       <Hero />
       <About />

@@ -278,6 +278,22 @@ export const projects = [
   },
 ]
 
+export const publications = [
+  {
+    title: "Towards Intelligent And Autonomous SOCs: Enabling LLM-Driven, MCP-Integrated, Multi-Agent Security Operations",
+    authors: "Hamad Moiz Chodhry",
+    journal: "Theses Journal — Computer Science & Engineering",
+    year: "2025",
+    doi: "",
+    url: "https://thesesjournal.com/index.php/1/article/view/2719",
+    pdfUrl: "/hamad-portfolio/research/ai-soc-paper.pdf",
+    abstract: "This research presents a novel architecture for autonomous Security Operations Centers (SOCs) by integrating Large Language Models (LLMs) with the Model Context Protocol (MCP) to create multi-agent security operations. The proposed system leverages four specialized AI agents — Investigator, Collector, Rule Creator, and Threat Publisher — that collaborate autonomously across SIEM, SOAR, threat intelligence, and case management platforms. By implementing MCP as a universal bridge between LLMs and enterprise security tools, the architecture enables structured LLM-callable functions for log queries, IOC enrichment, and automated case creation. Results demonstrate a 90% reduction in Mean Time to Respond (MTTR) and 100% alert coverage with automated audit trails.",
+    tags: ["AI Security", "LLM", "MCP", "SOC Automation", "Multi-Agent Systems", "Threat Detection"],
+    category: "AI Security / SOC Automation",
+    citations: 0,
+  },
+]
+
 export const researchTopics = [
   { title: "AI Security & Prompt Injection", description: "Research on detecting and mitigating prompt injection attacks against LLM-powered applications.", tags: ["AI Security", "LLM", "Prompt Injection"] },
   { title: "Android Forensics using MCP", description: "Leveraging Model Context Protocol for Android forensic data extraction and analysis.", tags: ["Mobile Forensics", "MCP", "Android"] },
