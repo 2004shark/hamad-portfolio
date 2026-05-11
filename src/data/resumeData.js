@@ -1,5 +1,6 @@
 export const personalInfo = {
   name: "Hamad Moiz Chodhry",
+  initials: "HMC",
   email: "hamadmoizchodhry@gmail.com",
   linkedin: "linkedin.com/in/hamad-moiz",
   location: "Pakistan | Remote | Open to UAE / EU / USA",
@@ -11,6 +12,12 @@ export const personalInfo = {
   role: "Vice President, Air University Cyber Security Society (Oct 2025 – Present)",
   summaryBlue: "Cybersecurity professional with hands-on SOC operations, threat detection, incident response, and AI-driven security automation experience. Proficient in SIEM platforms (Wazuh, ELK Stack, IBM QRadar, FortiSIEM, Splunk), EDR/XDR (CrowdStrike, SentinelOne), IDS/IPS (Suricata, Snort, Zeek), and SOAR (FortiSOAR, TheHive, Cortex). Architected AetherGuard — an autonomous, multi-agent AI SIEM leveraging Claude API, Model Context Protocol (MCP), and LLM reasoning to automate Tier-1 alert triage, threat hunting, and detection rule generation, reducing MTTR by up to 90%. Strong foundation in MITRE ATT&CK, NIST CSF, and purple team operations.",
   summaryRed: "Offensive security professional with hands-on experience conducting end-to-end penetration tests across Active Directory environments, enterprise networks, and web applications. Expert in manual exploitation – privilege escalation chains, AD attack paths (Kerberoasting, AS-REP Roasting, Pass-the-Hash), OWASP Top 10 web flaws, and lateral movement – without relying solely on automated scanners. Engineered an autonomous AI penetration testing agent (Claude API, OpenAI API, MCP) integrated with Nmap, Metasploit, and Burp Suite – enabling human-supervised, scalable end-to-end exploitation workflows.",
+  social: {
+    github: "https://github.com/2004shark",
+    linkedin: "https://linkedin.com/in/hamad-moiz",
+    email: "hamadmoizchodhry@gmail.com",
+    phone: "+92-308-4268511",
+  },
 }
 
 export const blueTeam = {
@@ -109,6 +116,7 @@ export const projects = [
       "Integrated technology stack: Wazuh (SIEM/XDR), OpenSearch/Elasticsearch (data lake), MISP (threat intel), TheHive (case management), Shuffle/n8n (workflow automation), PostgreSQL/SQLite (rule/IOC storage).",
       "Demonstrated 90% MTTR reduction in simulated SOC environment; 100% alert coverage with automated Markdown audit trails and compliance documentation.",
     ],
+    techStack: ["Claude API", "MCP", "Wazuh", "OpenSearch", "TheHive", "MISP", "Python", "TypeScript"],
   },
   {
     title: "Autonomous AI Penetration Testing Agent",
@@ -120,6 +128,7 @@ export const projects = [
       "Integrates with industry-standard pentesting tools for real-world attack simulation.",
       "Operator-in-the-loop design ensures safety and control over each kill chain phase.",
     ],
+    techStack: ["Claude API", "OpenAI", "MCP", "Nmap", "Metasploit", "Burp Suite", "Python"],
   },
   {
     title: "Active Directory Red Team Lab",
@@ -130,6 +139,7 @@ export const projects = [
       "Full attack chain documented with MITRE ATT&CK technique mappings and remediation recommendations.",
       "Demonstrates complete AD compromise lifecycle from initial access to domain dominance.",
     ],
+    techStack: ["BloodHound", "PowerView", "Mimikatz", "Impacket", "Hashcat", "Evil-WinRM"],
   },
   {
     title: "Web Application Penetration Test — DVWA",
@@ -140,6 +150,7 @@ export const projects = [
       "Each finding documented with Proof-of-Concept (PoC) exploits and CVSS scores.",
       "Integrated Wazuh/Suricata for detection validation — achieved 95% threat detection accuracy.",
     ],
+    techStack: ["Burp Suite", "SQLmap", "Wazuh", "Suricata", "OWASP Top 10"],
   },
   {
     title: "Advanced Network Pentesting & Segmentation",
@@ -149,6 +160,7 @@ export const projects = [
     highlights: [
       "All findings mapped to Cyber Kill Chain phases for remediation gap analysis.",
     ],
+    techStack: ["Nmap", "Wireshark", "pfSense", "Security Onion", "Metasploit"],
   },
   {
     title: "LLM Guard — Prompt Injection Detection",
@@ -158,6 +170,7 @@ export const projects = [
     highlights: [
       "Demonstrates proactive defense against evolving AI-specific attack vectors.",
     ],
+    techStack: ["Python", "LLM Security", "ML Classification", "OpenAI"],
   },
   {
     title: "Automated Threat Detection Pipeline",
@@ -165,6 +178,7 @@ export const projects = [
     team: "blue",
     description: "End-to-end automated detection and response system integrating Wazuh, Cortex, MISP, and TheHive; reduced MTTR through automated alert enrichment and case creation with full IOC lifecycle management.",
     highlights: [],
+    techStack: ["Wazuh", "Cortex", "MISP", "TheHive", "Python"],
   },
 ]
 
