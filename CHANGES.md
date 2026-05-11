@@ -99,9 +99,26 @@ z = -2    → CyberWeb (interactive network graph)
 
 ---
 
+## Vercel Deployment Fix
+
+### Files Changed
+- `vite.config.js` — changed `base` from `/hamad-portfolio/` to `/`
+- `vercel.json` — removed catch-all SPA rewrite (was breaking JS/CSS/PDF serving)
+- `src/data/resumeData.ts` — pdfUrl changed from `/hamad-portfolio/research/...` to `/research/...`
+
+### Issue
+Vercel's catch-all rewrite `{ "source": "/(.*)", "destination": "/index.html" }` was intercepting all requests including JS/CSS assets and the PDF file, returning the HTML shell instead of actual files.
+
+### Fix
+- Vite `base: '/'` for root deployment
+- Vercel auto-detects Vite SPA — no custom rewrites needed
+- Static assets and PDF now served directly, SPA routing handled by Vercel
+
+---
+
 ## Git History
 
 ```bash
+54e3a09  feat: research publications, cyber web background, threat particles
 e5450cd  feat: full TypeScript portfolio with SOC-themed components
-[Next]   feat: research publications, cyber web background, threat particles
 ```
