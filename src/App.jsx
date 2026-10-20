@@ -9,15 +9,17 @@ import Contact from './components/Contact'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-cyber-darkest">
+    <div className="min-h-screen bg-canvas text-ink">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Certifications />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Certifications />
+        <Contact />
+      </main>
     </div>
   )
 }
