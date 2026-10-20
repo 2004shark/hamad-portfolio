@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { experiences } from '../data/resumeData'
 import BlurFade from './BlurFade'
+import SectionHeading from './SectionHeading'
 
 const teamMeta = {
-  blue: { label: 'Defensive', color: 'text-def' },
-  red: { label: 'Offensive', color: 'text-off' },
-  both: { label: 'Defensive & Offensive', color: 'text-muted' },
+  blue: { label: 'Defensive', color: 'text-def', dot: 'bg-def', bar: 'bg-def' },
+  red: { label: 'Offensive', color: 'text-off', dot: 'bg-off', bar: 'bg-off' },
+  both: { label: 'Defensive & Offensive', color: 'text-violet', dot: 'bg-violet', bar: 'bg-violet' },
 }
 
 export default function Experience() {
@@ -15,9 +16,7 @@ export default function Experience() {
     <section id="experience" className="py-20 px-6 border-t border-line">
       <div className="max-w-5xl mx-auto">
         <BlurFade>
-          <header className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">Experience</h2>
-          </header>
+          <SectionHeading title="Experience" color="bg-violet" />
         </BlurFade>
 
         <div className="space-y-12">
@@ -29,18 +28,24 @@ export default function Experience() {
             return (
               <BlurFade key={`${exp.company}-${exp.role}`} delay={idx * 0.05}>
                 <div className="grid gap-x-10 gap-y-3 md:grid-cols-[150px_1fr]">
-                  <div className="text-[13px] font-mono text-faint pt-1.5">
-                    {exp.period}
+                  <div className="flex items-center gap-2.5 md:block">
+                    <span aria-hidden="true" className={`w-2 h-2 rounded-full ${team.dot} md:hidden`} />
+                    <span className="text-[13px] font-mono text-faint">
+                      {exp.period}
+                    </span>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-ink tracking-tight">
-                      {exp.role}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted">
+                    <div className="flex items-center gap-2.5">
+                      <span aria-hidden="true" className={`w-2 h-2 rounded-full ${team.dot} hidden md:block`} />
+                      <h3 className="text-lg font-semibold text-ink tracking-tight">
+                        {exp.role}
+                      </h3>
+                    </div>
+                    <p className="mt-1 ml-[18px] text-sm text-muted">
                       {exp.company} · {exp.location}
                     </p>
-                    <p className={`mt-1.5 text-xs font-medium uppercase tracking-wider ${team.color}`}>
+                    <p className={`mt-1.5 ml-[18px] text-xs font-semibold uppercase tracking-wider ${team.color}`}>
                       {team.label}
                     </p>
 
@@ -49,7 +54,7 @@ export default function Experience() {
                         <li key={i} className="flex items-start gap-3 text-[15px] text-muted leading-relaxed">
                           <span
                             aria-hidden="true"
-                            className="mt-[9px] w-1 h-1 rounded-full bg-faint flex-shrink-0"
+                            className={`mt-[9px] w-1.5 h-1.5 rounded-full ${team.dot} flex-shrink-0`}
                           />
                           <span>{h}</span>
                         </li>

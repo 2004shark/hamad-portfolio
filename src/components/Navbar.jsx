@@ -7,6 +7,7 @@ const navItems = [
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
+  { id: 'research', label: 'Research' },
   { id: 'certifications', label: 'Certifications' },
   { id: 'contact', label: 'Contact' },
 ]
@@ -50,7 +51,7 @@ export default function Navbar() {
           onClick={() => goTo('hero')}
           className="text-[15px] font-semibold tracking-tight text-ink"
         >
-          Hamad Moiz Chodhry
+          Hamad Moiz Chodhry<span className="text-accent">.</span>
         </button>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -76,7 +77,7 @@ export default function Navbar() {
 
           <a
             href={`mailto:${personalInfo.email}`}
-            className="hidden sm:inline-flex px-4 py-2 text-[13px] font-medium rounded-md bg-ink text-canvas hover:opacity-90 transition-opacity"
+            className="hidden sm:inline-flex px-4 py-2 text-[13px] font-medium rounded-md bg-accent text-white hover:opacity-90 transition-opacity"
           >
             Get in touch
           </a>
@@ -112,7 +113,7 @@ export default function Navbar() {
             ))}
             <a
               href={`mailto:${personalInfo.email}`}
-              className="mt-2 mb-1 px-4 py-2.5 text-center text-sm font-medium rounded-md bg-ink text-canvas"
+              className="mt-2 mb-1 px-4 py-2.5 text-center text-sm font-medium rounded-md bg-accent text-white"
             >
               Get in touch
             </a>

@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: "Hamad Moiz Chodhry",
-  email: "[EMAIL]",
+  email: "hamadmoizchodhry@gmail.com",
   location: "Pakistan · Remote · Open to UAE / EU / USA",
-  phone: "+92-[PHONE]",
+  phone: "+92-308-4268511",
   gpa: "3.86 / 4.0",
   university: "Air University, Multan, Pakistan",
   degree: "B.S. Cybersecurity",
@@ -16,8 +16,8 @@ export const personalInfo = {
   social: {
     github: "https://github.com/2004shark",
     linkedin: "https://linkedin.com/in/hamad-moiz",
-    email: "[EMAIL]",
-    phone: "+92-[PHONE]",
+    email: "hamadmoizchodhry@gmail.com",
+    phone: "+92-308-4268511",
   },
 }
 
@@ -254,6 +254,43 @@ export const projects = [
       "An end-to-end detection and response system integrating Wazuh, Cortex, MISP, and TheHive, with automated alert enrichment and case creation across the IOC lifecycle.",
     highlights: [],
     techStack: ["Wazuh", "Cortex", "MISP", "TheHive", "Python"],
+  },
+]
+
+export const publications = [
+  {
+    title:
+      "Towards Intelligent And Autonomous SOCs: Enabling LLM-Driven, MCP-Integrated, Multi-Agent Security Operations",
+    authors: "Hamad Moiz Chodhry",
+    venue: "Theses Journal — Computer Science & Engineering",
+    year: "2025",
+    url: "https://thesesjournal.com/index.php/1/article/view/2719",
+    pdfUrl: "/hamad-portfolio/research/ai-soc-paper.pdf",
+    abstract:
+      "This research presents an architecture for autonomous Security Operations Centers that integrates Large Language Models with the Model Context Protocol to create multi-agent security operations. Four specialized agents — Investigator, Collector, Rule Creator, and Threat Publisher — collaborate across SIEM, SOAR, threat intelligence, and case management platforms. MCP acts as the bridge between LLMs and enterprise security tools, exposing structured functions for log queries, IOC enrichment, and case creation. The system reduced Mean Time to Respond and produced automated audit trails for every investigation.",
+    tags: ["AI Security", "LLM", "MCP", "SOC Automation", "Multi-Agent Systems", "Threat Detection"],
+    topics: [
+      {
+        title: "AI Security & Prompt Injection",
+        desc: "Detecting and mitigating prompt injection attacks against LLM-powered applications.",
+      },
+      {
+        title: "Android Forensics using MCP",
+        desc: "Using Model Context Protocol for Android forensic data extraction and analysis.",
+      },
+      {
+        title: "Zero Trust Architecture",
+        desc: "Applying zero trust principles to enterprise network security architecture.",
+      },
+      {
+        title: "Detection Engineering",
+        desc: "Sigma rule development and detection engineering for enterprise SOC environments.",
+      },
+      {
+        title: "Threat Intelligence Automation",
+        desc: "Automating threat intelligence feeds and IOC lifecycle management with MISP and TheHive.",
+      },
+    ],
   },
 ]
 

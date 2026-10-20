@@ -1,5 +1,6 @@
 import { personalInfo, certifications } from '../data/resumeData'
 import BlurFade from './BlurFade'
+import SectionHeading from './SectionHeading'
 
 const details = [
   { label: 'Education', value: `${personalInfo.degree}, ${personalInfo.university}` },
@@ -15,9 +16,7 @@ export default function About() {
     <section id="about" className="py-20 px-6 border-t border-line">
       <div className="max-w-5xl mx-auto">
         <BlurFade>
-          <header className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">About</h2>
-          </header>
+          <SectionHeading title="About" color="bg-accent" />
         </BlurFade>
 
         <div className="grid md:grid-cols-5 gap-10 md:gap-12">

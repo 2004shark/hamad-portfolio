@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import { projects } from '../data/resumeData'
 import BlurFade from './BlurFade'
+import SectionHeading from './SectionHeading'
 
 const teamMeta = {
-  blue: { label: 'Defensive', color: 'text-def' },
-  red: { label: 'Offensive', color: 'text-off' },
-  both: { label: 'Research', color: 'text-muted' },
+  blue: { label: 'Defensive', color: 'text-def', dot: 'bg-def', top: 'border-t-def' },
+  red: { label: 'Offensive', color: 'text-off', dot: 'bg-off', top: 'border-t-off' },
+  both: { label: 'Research', color: 'text-violet', dot: 'bg-violet', top: 'border-t-violet' },
 }
 
 const filters = [
-  { key: 'all', label: 'All' },
-  { key: 'blue', label: 'Defensive' },
-  { key: 'red', label: 'Offensive' },
+  { key: 'all', label: 'All', active: 'bg-accent text-white' },
+  { key: 'blue', label: 'Defensive', active: 'bg-def text-white' },
+  { key: 'red', label: 'Offensive', active: 'bg-off text-white' },
 ]
 
 export default function Projects() {
@@ -22,12 +23,11 @@ export default function Projects() {
     <section id="projects" className="py-20 px-6 border-t border-line">
       <div className="max-w-5xl mx-auto">
         <BlurFade>
-          <header className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">Projects</h2>
-            <p className="mt-2 text-muted max-w-2xl">
-              Selected work from lab environments, client engagements, and personal research.
-            </p>
-          </header>
+          <SectionHeading
+            title="Projects"
+            blurb="Selected work from lab environments, client engagements, and personal research."
+            color="bg-off"
+          />
         </BlurFade>
 
         <BlurFade delay={0.05}>
@@ -37,7 +37,7 @@ export default function Projects() {
                 key={f.key}
                 onClick={() => setFilter(f.key)}
                 className={`px-4 py-1.5 text-[13px] font-medium rounded-md transition-colors ${
-                  filter === f.key ? 'bg-ink text-canvas' : 'text-muted hover:text-ink'
+                  filter === f.key ? f.active : 'text-muted hover:text-ink'
                 }`}
               >
                 {f.label}
@@ -51,8 +51,8 @@ export default function Projects() {
             const team = teamMeta[project.team]
             return (
               <BlurFade key={project.title} delay={0.04 * idx}>
-                <article className="h-full flex flex-col p-6 rounded-lg border border-line bg-surface">
-                  <p className={`text-xs font-medium uppercase tracking-wider ${team.color}`}>
+                <article className={`h-full flex flex-col p-6 rounded-lg border border-line border-t-2 ${team.top} bg-surface`}>
+                  <p className={`text-xs font-semibold uppercase tracking-wider ${team.color}`}>
                     {team.label}
                   </p>
 
@@ -70,7 +70,7 @@ export default function Projects() {
                         <li key={i} className="flex items-start gap-2.5 text-[13px] text-muted leading-relaxed">
                           <span
                             aria-hidden="true"
-                            className="mt-[7px] w-1 h-1 rounded-full bg-faint flex-shrink-0"
+                            className={`mt-[7px] w-1.5 h-1.5 rounded-full ${team.dot} flex-shrink-0`}
                           />
                           <span>{h}</span>
                         </li>
@@ -83,7 +83,7 @@ export default function Projects() {
                       {project.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 text-[11px] font-mono text-faint border border-line rounded"
+                          className="px-2 py-1 text-[11px] font-mono text-faint border border-line rounded hover:border-accent hover:text-accent transition-colors"
                         >
                           {tech}
                         </span>

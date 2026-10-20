@@ -11,6 +11,7 @@
   --color-faint: var(--c-faint);
   --color-accent: var(--c-accent);
   --color-accent-soft: var(--c-accent-soft);
+  --color-violet: var(--c-violet);
   --color-def: var(--c-def);
   --color-off: var(--c-off);
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -18,30 +19,32 @@
 }
 
 :root {
-  --c-canvas: #fbfbfa;
+  --c-canvas: #f7f7f5;
   --c-surface: #ffffff;
-  --c-line: #e4e4e1;
-  --c-ink: #1a1a18;
-  --c-muted: #56565c;
-  --c-faint: #86868c;
-  --c-accent: #2b5fb8;
-  --c-accent-soft: #edf2fa;
-  --c-def: #466b8a;
-  --c-off: #9a5140;
+  --c-line: #e2e2de;
+  --c-ink: #17181c;
+  --c-muted: #55565e;
+  --c-faint: #83858e;
+  --c-accent: #2b5fd9;
+  --c-accent-soft: #e8eefc;
+  --c-violet: #6d4fd6;
+  --c-def: #0f7d8c;
+  --c-off: #c2512e;
   color-scheme: light;
 }
 
 .dark {
-  --c-canvas: #101215;
-  --c-surface: #161a1f;
-  --c-line: #272c33;
-  --c-ink: #e6e8ea;
-  --c-muted: #a2a8b0;
-  --c-faint: #6c737b;
-  --c-accent: #86a9ea;
-  --c-accent-soft: #1a2331;
-  --c-def: #8fadcb;
-  --c-off: #cd8670;
+  --c-canvas: #101318;
+  --c-surface: #171b21;
+  --c-line: #2a3038;
+  --c-ink: #e8eaed;
+  --c-muted: #a4abb4;
+  --c-faint: #707883;
+  --c-accent: #7ba3f5;
+  --c-accent-soft: #1b2740;
+  --c-violet: #a88ef2;
+  --c-def: #4fc3d1;
+  --c-off: #f08a62;
   color-scheme: dark;
 }
 

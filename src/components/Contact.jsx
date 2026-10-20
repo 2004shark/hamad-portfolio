@@ -1,5 +1,6 @@
 import { personalInfo } from '../data/resumeData'
 import BlurFade from './BlurFade'
+import SectionHeading from './SectionHeading'
 import { GitHub, LinkedIn, Mail, Phone } from './icons'
 
 const links = [
@@ -16,20 +17,18 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div>
             <BlurFade>
-              <header>
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">Contact</h2>
-                <p className="mt-4 text-[17px] text-muted leading-relaxed max-w-md">
-                  I am open to remote and relocation opportunities in SOC operations,
-                  detection engineering, penetration testing, and AI security. If you have
-                  a role or a project in mind, the fastest way to reach me is email.
-                </p>
-              </header>
+              <SectionHeading title="Contact" color="bg-accent" />
+              <p className="text-[17px] text-muted leading-relaxed max-w-md">
+                I am open to remote and relocation opportunities in SOC operations,
+                detection engineering, penetration testing, and AI security. If you have
+                a role or a project in mind, the fastest way to reach me is email.
+              </p>
             </BlurFade>
 
             <BlurFade delay={0.08}>
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center gap-2 mt-7 px-5 py-2.5 text-sm font-medium rounded-md bg-ink text-canvas hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 mt-7 px-5 py-2.5 text-sm font-medium rounded-md bg-accent text-white hover:opacity-90 transition-opacity"
               >
                 <Mail className="w-4 h-4" />
                 {personalInfo.email}
